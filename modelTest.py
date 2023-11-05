@@ -83,7 +83,7 @@ def predict_on_live_video(video_file_path, output_file_path, window_size):
             predicted_max=np.max(predicted_labels_probabilities_averaged)
             predicted_label = np.argmax(predicted_labels_probabilities_averaged)
             print(predicted_max)
-            if predicted_max>0.6 and predicted_label<10:
+            if predicted_max>0.8 and predicted_label<10:
                 predicted_label = np.argmax(predicted_labels_probabilities_averaged)
                 frame_count=frame_count+1
                 if frame_count<450:
